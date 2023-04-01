@@ -6,10 +6,15 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXFileReference section */
+		DACCC66A29D8F83900E134DF /* LCC Notes.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LCC Notes.tex"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		DA51FB9F29D8F59A002CAAC1 = {
 			isa = PBXGroup;
 			children = (
+				DACCC66A29D8F83900E134DF /* LCC Notes.tex */,
 			);
 			sourceTree = "<group>";
 		};

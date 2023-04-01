@@ -1,0 +1,109 @@
+\documentclass[10pt]{book}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage[parfill]{parskip}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{amssymb}
+
+\usepackage{placeins}
+\usepackage{textcomp}
+\usepackage{longtable}
+
+% TOC Indents
+
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{3.0em}}
+\makeatother
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue,
+            citecolor=blue, urlcolor=blue]{hyperref}
+
+\usepackage{makeidx}
+
+\makeindex
+
+
+\usepackage{sectsty}
+\sectionfont{\LARGE}
+%\sectionfont{\Large}
+
+
+\subsectionfont{\Large}
+\subsubsectionfont{\Large}
+\paragraphfont{\large}
+\subparagraphfont{\normalsize}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{exercise}{Exercise}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+\newtheorem{warning}{Warning}
+
+\def\grad{ \mbox{grad}}
+\def\curl{ \mbox{curl}}
+\def\div{ \mbox{div}}
+\def\U{\ensuremath {\cal U}}
+\def\S{\ensuremath {\cal S}}
+\def\V{\ensuremath {\cal V}}
+\def\R{\ensuremath {\cal R}}
+\def\tr{\ensuremath {\mbox{tr}}}
+
+% Network Notes Macros
+
+\newcommand{\secref}[1]{(See Section~\ref{sec:#1} on page~\pageref{sec:#1})}
+\newcommand{\secrefnb}[1]{See Section~\ref{sec:#1} on page~\pageref{sec:#1}}
+\newcommand{\appref}[1]{(See Appendix~\ref{app:#1} on page~\pageref{app:#1})}
+\newcommand{\cptref}[1]{see Chapter~\ref{cpt:#1} - #1 on page~\pageref{cpt:#1}}
+
+\newcommand{\moreinfo}[2]{For more information on how to use this \gls{#2} see Chapter~\ref{cpt:#1} - #1 on page~\pageref{cpt:#1}. }
+
+\newcommand{\seriesseven}{$\pmb{Series_7}$}
+
+% End Network Notes Macros
+
+\usepackage{glossaries}
+\makenoidxglossaries
+
+\input{./Glossary/0_GlossaryDefs}
+
+% ------------------- Title and Author -----------------------------
+\title{LCC Notes}
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\tableofcontents
+
+%\listoffigures
+\listoftables
+
+\mainmatter
+\setcounter{chapter}{0}
+
+%\include{./NetworkProtocol/0_NetworkProtocol}
+
+\bibliographystyle{plain-annote}
+\bibliography{mybibliography}
+
+\appendix
+
+%\include{./RevisionHistory/0_RevisionHistory}
+
+\clearpage
+
+\printnoidxglossaries
+
+\printindex
+
+\end{document}
+\end
+
+
