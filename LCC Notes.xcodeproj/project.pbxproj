@@ -9,12 +9,14 @@
 /* Begin PBXFileReference section */
 		DACCC66A29D8F83900E134DF /* LCC Notes.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LCC Notes.tex"; sourceTree = "<group>"; };
 		DACCC66C29D8FF6400E134DF /* 0_GlossaryDefs.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = 0_GlossaryDefs.tex; sourceTree = "<group>"; };
+		DACCC66E29D900D300E134DF /* 0_RevisionHistory.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = 0_RevisionHistory.tex; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		DA51FB9F29D8F59A002CAAC1 = {
 			isa = PBXGroup;
 			children = (
+				DACCC66D29D900B000E134DF /* RevisionHistory */,
 				DACCC66B29D8FF2B00E134DF /* Glossary */,
 				DACCC66A29D8F83900E134DF /* LCC Notes.tex */,
 			);
@@ -26,6 +28,14 @@
 				DACCC66C29D8FF6400E134DF /* 0_GlossaryDefs.tex */,
 			);
 			path = Glossary;
+			sourceTree = "<group>";
+		};
+		DACCC66D29D900B000E134DF /* RevisionHistory */ = {
+			isa = PBXGroup;
+			children = (
+				DACCC66E29D900D300E134DF /* 0_RevisionHistory.tex */,
+			);
+			path = RevisionHistory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

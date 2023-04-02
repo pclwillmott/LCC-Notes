@@ -1,0 +1,31 @@
+% Activate the following line by filling in the right side. If for example the name of the root file is Main.tex, write
+% "...root = Main.tex" if the chapter file is in the same directory, and "...root = ../Main.tex" if the chapter is in a subdirectory.
+ 
+%!TEX root =
+
+\chapter[Revision History]{Revision History}
+
+\begin{center}
+\begin{longtable}{|p{3cm}|p{11.2cm}|}
+\caption{Revision History.} \label{tab:RevisionHistory} \\
+ 
+\hline \multicolumn{1}{|p{3cm}|}{\textbf{Release Date}} & \multicolumn{1}{p{11.2cm}|}{\textbf{Changes}} \\ \hline
+\endfirsthead
+ 
+\multicolumn{2}{c}%
+{{ \tablename\ \thetable{} -- continued from previous page}} \\
+
+
+\hline \multicolumn{1}{|p{3cm}|}{\textbf{Release Date}} & \multicolumn{1}{p{11.2cm}|}{\textbf{Changes}}  \\ \hline
+\endhead
+\hline
+23 Jan 2022 &
+\begin{itemize}
+\item Baseline.
+\end{itemize}\\
+
+\hline
+
+\end{longtable}
+\end{center}
+
