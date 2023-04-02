@@ -8,14 +8,24 @@
 
 /* Begin PBXFileReference section */
 		DACCC66A29D8F83900E134DF /* LCC Notes.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LCC Notes.tex"; sourceTree = "<group>"; };
+		DACCC66C29D8FF6400E134DF /* 0_GlossaryDefs.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = 0_GlossaryDefs.tex; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		DA51FB9F29D8F59A002CAAC1 = {
 			isa = PBXGroup;
 			children = (
+				DACCC66B29D8FF2B00E134DF /* Glossary */,
 				DACCC66A29D8F83900E134DF /* LCC Notes.tex */,
 			);
+			sourceTree = "<group>";
+		};
+		DACCC66B29D8FF2B00E134DF /* Glossary */ = {
+			isa = PBXGroup;
+			children = (
+				DACCC66C29D8FF6400E134DF /* 0_GlossaryDefs.tex */,
+			);
+			path = Glossary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
