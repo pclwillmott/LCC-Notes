@@ -1,0 +1,43 @@
+% Activate the following line by filling in the right side. If for example the name of the root file is Main.tex, write
+% "...root = Main.tex" if the chapter file is in the same directory, and "...root = ../Main.tex" if the chapter is in a subdirectory.
+ 
+%!TEX root =  
+
+\chapter[Transport Layer]{Transport Layer}
+
+\section{Computer to CAN Interface}
+
+The RR-CirKits LCC Buffer-USB is capable of sending and receiving arbitrary CAN messages via the use of ASCII formatted message strings.
+
+When the LCC Buffer-USB receives a valid ASCII message string, it converts it to a CAN message and transmits it out over the CAN network. Conversely, when a CAN message is received by the LCC Buffer-USB, it converts it to an ASCII message string and transmits it out of the USB port. In order to facilitate human CAN network monitoring,  a LF character is appended to each output ASCII message string. Doing so makes it much easier to watch the incoming messages on a terminal where each message is on a separate line. 
+
+Message strings are formatted as human-readable ASCII sequences that are easy to enter and read. Each message string is of variable length, depending on the identifier value and the number of data bytes included in the message. All message string characters are in upper case only. Lower case characters will be interpreted as a syntax error and the message will be discarded. Identifier and data fields are treated as base-16 digits (hexadecimal). The syntax of both transmit and receive message strings are identical.
+
+There are two types of message strings:
+
+\begin{itemize}
+\item Normal CAN messages
+\item Request-To-Transmit CAN messages (RTR)
+\end{itemize}
+
+The LCC Buffer-USB only supports Normal CAN message strings.
+
+A normal CAN message consists of the type (11-bit or 29-bit), identifier, and data bytes and is encoded as follows:
+
+Normal CAN Message Syntax
+\begin{verbatim}
+: <S | X> <IDENTIFIER> <N> <DATA-0> <DATA-1> ... <DATA-7> ;
+\end{verbatim}
+
+The first character,``:", is for synchronization and allows the LCC Buffer-USB parser to detect the beginning of a command string.
+
+The following character is either ``S'' for standard 11-bit, or ``X'' for extended 29-bit identifier type. LCC only uses extended 29-bit headers and so the LCC Buffer-USB does not support standard identifiers.
+
+The ``IDENTIFIER'' field consists of from one to eight hexadecimal digits, indicating the value of the identifier. Note that if a 29-bit value is entered and an 11-bit value was specified, the command will be treated as invalid and ignored.
+
+The character ``N'' indicates that the message is a normal (non-RTR) transmission.
+
+Each ''DATA-n'' field is a pair of hexadecimal digits defining the data byte to be sent. If no data is to be sent (length = zero), then the data bytes are omitted. Each data byte specified must be a hexadecimal pair in order to eliminate ambiguity. 
+
+The terminating character ``;'' signals the end of the message.
+
