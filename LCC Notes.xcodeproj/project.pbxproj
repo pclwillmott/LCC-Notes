@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		DA2094182BC2C94100737A12 /* LocoNetGatewayS.odt */ = {isa = PBXFileReference; lastKnownFileType = file; path = LocoNetGatewayS.odt; sourceTree = "<group>"; };
+		DA2094192BC2C94100737A12 /* LocoNetGatewayTN.odt */ = {isa = PBXFileReference; lastKnownFileType = file; path = LocoNetGatewayTN.odt; sourceTree = "<group>"; };
+		DA20941A2BC2CCFB00737A12 /* LocoNetGatewayS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LocoNetGatewayS.pdf; sourceTree = "<group>"; };
+		DA20941B2BC2CCFB00737A12 /* LocoNetGatewayTN.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LocoNetGatewayTN.pdf; sourceTree = "<group>"; };
 		DA459AAE29E0547000CD7D0B /* 0_TransportLayer.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = 0_TransportLayer.tex; sourceTree = "<group>"; };
 		DACCC66A29D8F83900E134DF /* LCC Notes.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LCC Notes.tex"; sourceTree = "<group>"; };
 		DACCC66C29D8FF6400E134DF /* 0_GlossaryDefs.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = 0_GlossaryDefs.tex; sourceTree = "<group>"; };
@@ -14,6 +18,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		DA2094172BC2C8C000737A12 /* OpenLCB */ = {
+			isa = PBXGroup;
+			children = (
+				DA2094182BC2C94100737A12 /* LocoNetGatewayS.odt */,
+				DA20941A2BC2CCFB00737A12 /* LocoNetGatewayS.pdf */,
+				DA20941B2BC2CCFB00737A12 /* LocoNetGatewayTN.pdf */,
+				DA2094192BC2C94100737A12 /* LocoNetGatewayTN.odt */,
+			);
+			path = OpenLCB;
+			sourceTree = "<group>";
+		};
 		DA459AAD29E0544300CD7D0B /* Transport */ = {
 			isa = PBXGroup;
 			children = (
@@ -25,6 +40,7 @@
 		DA51FB9F29D8F59A002CAAC1 = {
 			isa = PBXGroup;
 			children = (
+				DA2094172BC2C8C000737A12 /* OpenLCB */,
 				DA459AAD29E0544300CD7D0B /* Transport */,
 				DACCC66D29D900B000E134DF /* RevisionHistory */,
 				DACCC66B29D8FF2B00E134DF /* Glossary */,
